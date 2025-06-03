@@ -4,6 +4,12 @@ addEventListener('fetch', (event) => {
 })
 
 const routes = {
+  githubusercontent: {
+    url: 'https://raw.githubusercontent.com',
+    replaces: {
+      'raw.githubusercontent.com': '$host/githubusercontent',
+    },
+  },
   stable: {
     url: 'https://charts.helm.sh/stable',
     replaces: {
@@ -26,18 +32,6 @@ const routes = {
     url: 'https://prometheus-community.github.io/helm-charts',
     replaces: {
       'prometheus-community.github.io/helm-charts': '$host/prometheus',
-    },
-  },
-  'k8s-at-home': {
-    url: 'https://k8s-at-home.com/charts/',
-    replaces: {
-      'github.com': 'hub.fastgit.org',
-    },
-  },
-  self: {
-    url: 'https://ciiiii.github.io/helm-charts/',
-    replaces: {
-      'github.com': 'hub.fastgit.org',
     },
   },
   argo: {
