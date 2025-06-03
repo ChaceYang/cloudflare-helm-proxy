@@ -4,6 +4,12 @@ addEventListener('fetch', (event) => {
 })
 
 const routes = {
+  github: {
+    url: 'https://github.com',
+    replaces: {
+      'github.com': '$host/github',
+    },
+  },
   githubusercontent: {
     url: 'https://raw.githubusercontent.com',
     replaces: {
@@ -25,7 +31,7 @@ const routes = {
   grafana: {
     url: 'https://grafana.github.io/helm-charts',
     replaces: {
-      'github.com': 'hub.fastgit.org',
+      'github.com': '$host/github',
     },
   },
   prometheus: {
@@ -37,7 +43,7 @@ const routes = {
   argo: {
     url: 'https://argoproj.github.io/argo-helm/',
     replaces: {
-      'github.com': 'hub.fastgit.org',
+      'github.com': '$host/github',
     },
   },
   cilium: {
