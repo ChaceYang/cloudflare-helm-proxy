@@ -64,7 +64,10 @@ async function handleRequest(event) {
             value.replaces &&
             (pathname.endsWith('index.yml') || pathname.endsWith('index.yaml'))
           ) {
-            const contentType = resp.headers.get('content-type')
+            let contentType = resp.headers.get('content-type')
+            if(request.url.endsWith('index.yml') || request.url.endsWith('index.yaml')) {
+              contentType = 'text/yaml'
+            }
             switch (contentType) {
               case 'text/yaml':
                 let respStr = await resp.text()
