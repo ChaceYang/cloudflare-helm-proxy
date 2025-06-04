@@ -8,11 +8,13 @@ const routes = {
     url: 'https://github.com',
     replaces: {
       'github.com': '$host/github',
+      'raw.githubusercontent.com': '$host/githubusercontent',
     },
   },
   githubusercontent: {
     url: 'https://raw.githubusercontent.com',
     replaces: {
+      'github.com': '$host/github',
       'raw.githubusercontent.com': '$host/githubusercontent',
     },
   },
@@ -32,6 +34,7 @@ const routes = {
     url: 'https://grafana.github.io/helm-charts',
     replaces: {
       'github.com': '$host/github',
+      'raw.githubusercontent.com': '$host/githubusercontent',
     },
   },
   prometheus: {
@@ -44,6 +47,7 @@ const routes = {
     url: 'https://argoproj.github.io/argo-helm/',
     replaces: {
       'github.com': '$host/github',
+      'raw.githubusercontent.com': '$host/githubusercontent',
     },
   },
   cilium: {
