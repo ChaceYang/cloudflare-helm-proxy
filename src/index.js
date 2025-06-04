@@ -43,6 +43,12 @@ const routes = {
       'prometheus-community.github.io/helm-charts': '$host/prometheus',
     },
   },
+  aquasecurity: {
+    url: 'https://aquasecurity.github.io/helm-charts',
+    replaces: {
+      'aquasecurity.github.io/helm-charts': '$host/aquasecurity',
+    },
+  },
   argo: {
     url: 'https://argoproj.github.io/argo-helm/',
     replaces: {
