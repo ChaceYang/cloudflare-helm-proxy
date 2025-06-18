@@ -30,6 +30,20 @@ const routes = {
       'charts.helm.sh': '$host',
     },
   },
+  percona: {
+    url: 'https://percona.github.io/percona-helm-charts',
+    replaces: {
+      'github.com': '$host/github',
+      'raw.githubusercontent.com': '$host/githubusercontent',
+    },
+  },
+  bitnami: {
+    url: 'https://repo.broadcom.com/bitnami-files',
+    replaces: {
+      'github.com': '$host/github',
+      'registry-1.docker.io': 'docker.alow.store',
+    },
+  },
   grafana: {
     url: 'https://grafana.github.io/helm-charts',
     replaces: {
